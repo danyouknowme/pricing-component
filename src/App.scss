@@ -2,5 +2,11 @@
 
 .App {
   font-family: 'Montserrat', sans-serif;
-  overflow: hidden;
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 375px) {
+  .App {
+    overflow: visible;
+  }
 }

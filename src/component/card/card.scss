@@ -186,3 +186,37 @@
     }
   }
 }
+
+@media screen and (max-width: 375px){
+  body {
+    overflow: visible;
+  }
+
+  .card {
+    background-size: 0;
+    height: 1750px;
+    width: 100vw;
+  }
+
+  .card .header {
+    top: 70px;
+  }
+
+  .card .component {
+    top: 220px;
+    flex-direction: column;
+  }
+
+  .card .component .small-com {
+    width: 330px;
+    border-radius: 10px;
+  }
+
+  .card .component .com2 {
+    width: 330px;
+  }
+
+  .card .component .com-props button {
+    margin-bottom: 20px;
+  }
+}
