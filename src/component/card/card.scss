@@ -56,6 +56,10 @@
           transition: .4s;
           border-radius: 34px;
 
+          &:hover {
+            background: linear-gradient(to right, hsl(236, 72%, 79%, 0.5), hsl(236, 72%, 79%, 0.5));
+          }
+
           .slider {
             position: absolute;
             content: "";
@@ -110,6 +114,12 @@
       button {
         background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
         color: hsl(240, 78%, 98%);
+
+        &:hover {
+          color: hsl(237, 63%, 64%);
+          border: 1px solid hsl(237, 63%, 64%);
+          background: linear-gradient(to right, #fff, #fff);
+        }
       }
     }
 
@@ -139,6 +149,12 @@
       button {
         background-color: #fff;
         color: hsl(237, 63%, 64%);
+
+        &:hover {
+          color: #fff;
+          border: 1px solid #fff;
+          background-color: hsl(237, 63%, 64%);
+        }
       }
     }
 
