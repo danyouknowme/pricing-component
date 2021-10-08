@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+.card {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../../assets/images/bg-top.svg"), url("../../assets/images/bg-bottom.svg");
+  background-repeat: no-repeat;
+  background-position: top right, bottom left;
+  background-size: 500px;
+  background-color: #F7F7FF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+
+  
+  .header {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 100px;
+
+    h1 {
+      margin: 0;
+      color: hsl(233, 13%, 49%);
+    }
+
+    .period {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: hsl(234, 14%, 74%);
+      position: relative;
+      top: 50px;
+
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 55px;
+        height: 28px;
+
+        .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+          -webkit-transition: .4s;
+          transition: .4s;
+          border-radius: 34px;
+
+          &:before {
+            position: absolute;
+            content: "";
+            height: 22px;
+            width: 22px;
+            left: 30px;
+            bottom: 3px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+            border-radius: 50%;
+          }
+        }
+
+        
+      }
+
+      .anually {
+        margin-right: 30px;
+      }
+
+      .monthly {
+        margin-left: 30px;
+      }
+    }
+  }
+
+  .component {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 150px;    
+
+    .small-com {
+      width: 400px;
+      height: 500px;
+      background-color: #fff;
+    }
+
+    .com1 {
+      border-radius: 10px 0 0 10px;
+    }
+
+    .com2 {
+      width: 350px;
+      height: 550px;
+      background: linear-gradient(to bottom, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+      border-radius: 10px;
+    }
+
+    .com3 {
+      border-radius: 0 10px 10px 0;
+    }
+  }
+}
