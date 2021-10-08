@@ -44,7 +44,7 @@
         width: 55px;
         height: 28px;
 
-        .slider {
+        .slide {
           position: absolute;
           cursor: pointer;
           top: 0;
@@ -56,7 +56,7 @@
           transition: .4s;
           border-radius: 34px;
 
-          &:before {
+          .slider {
             position: absolute;
             content: "";
             height: 22px;
@@ -67,6 +67,10 @@
             -webkit-transition: .4s;
             transition: .4s;
             border-radius: 50%;
+          }
+
+          .year {
+            left: 3px;
           }
         }
 

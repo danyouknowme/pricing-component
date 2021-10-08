@@ -1,42 +1,50 @@
-import React from "react";
+import React, { useState } from "react";
 import "./card.scss";
 
 const Card = () => {
+  const [isMonthly, setIsMonthly] = useState(true);
+
+  const togglePricing = () => {
+    setIsMonthly(!isMonthly);
+  }
+
   return (
-    <div class="card">
-      <div class="header">
+    <div className="card">
+      <div className="header">
         <h1>Our Pricing</h1>
-        <div class="period">
-          <div class="anually">Anually</div>
-          <label class="switch">
-            <span class="slider round"></span>
+        <div className="period">
+          <div className="anually">Anually</div>
+          <label className="switch">
+            <span onClick={togglePricing} className="slide">
+              <span className={isMonthly ? "slider" : "slider year"}></span>
+            </span>
           </label>
-          <div class="monthly">Monthly</div>
+          <div className="monthly">Monthly</div>
         </div>
       </div>
-      <div class="component">
-        <div class="com1 small-com com-props">
-          <p class="title">Basic</p>
-          <h1 class="price"><p class="unit">$</p>19.99</h1>
-          <span class="storage">500 GB Storage</span>
-          <span class="users">2 Users Allowed</span>
-          <span class="memory">Send up to 3 GB</span>
+      <div className="component">
+        <div className="com1 small-com com-props">
+          <p className="title">Basic</p>
+          <h1 className="price"><p className="unit">$</p>{isMonthly ? "19.99" : "199.99"}</h1>
+          <span className="storage">500 GB Storage</span>
+          <span className="users">2 Users Allowed</span>
+          <span className="memory">Send up to 3 GB</span>
           <button>LEARN MORE</button>
         </div>
-        <div class="com-props com2">
-          <p class="title">Professional</p>
-          <h1 class="price"><p class="unit">$</p>24.99</h1>
-          <span class="storage">1 TB Storage</span>
-          <span class="users">5 Users Allowed</span>
-          <span class="memory">Send up to 10 GB</span>
+        <div className="com-props com2">
+          <p className="title">Professional</p>
+          <h1 className="price"><p className="unit">$</p>{isMonthly ? "24.99" : "249.99"}</h1>
+          <span className="storage">1 TB Storage</span>
+          <span className="users">5 Users Allowed</span>
+          <span className="memory">Send up to 10 GB</span>
           <button>LEARN MORE</button>
         </div>
-        <div class="com3 small-com com-props">
-          <p class="title">Master</p>
-          <h1 class="price"><p class="unit">$</p>39.99</h1>
-          <span class="storage">2 TB Storage</span>
-          <span class="users">10 Users Allowed</span>
-          <span class="memory">Send up to 20 GB</span>
+        <div className="com3 small-com com-props">
+          <p className="title">Master</p>
+          <h1 className="price"><p className="unit">$</p>{isMonthly ? "39.99" : "399.99"}</h1>
+          <span className="storage">2 TB Storage</span>
+          <span className="users">10 Users Allowed</span>
+          <span className="memory">Send up to 20 GB</span>
           <button>LEARN MORE</button>
         </div>
       </div>
